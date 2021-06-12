@@ -19,5 +19,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "no-prototype-builtins": "off",
     "prefer-promise-reject-errors": "off",
+    "no-unneeded-ternary": "off",
+    "no-useless-escape": "off",
   },
 };

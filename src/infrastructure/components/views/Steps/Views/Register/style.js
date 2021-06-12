@@ -24,8 +24,8 @@ export const SocialRegister = styled.div({
   alignItems: "center",
   marginTop: ".5rem",
   "& p": {
-    fontSize: "1.1rem"
-  }
+    fontSize: "1.1rem",
+  },
 });
 
 export const SocialButton = styled.button({
@@ -40,9 +40,15 @@ export const SocialButton = styled.button({
   paddingBottom: "5px",
   outline: "none",
   "&:hover": {
-    borderBottom: `1px solid ${theme.palette.primary}`
+    borderBottom: `1px solid ${theme.palette.primary}`,
   },
   "& p": {
-    margin: "0rem 2rem"
-  }
+    margin: "0rem 2rem",
+  },
+});
+
+export const Error = styled.span({
+  color: "red",
+  fontWeight: 700,
+  fontSize: ".8rem",
 });

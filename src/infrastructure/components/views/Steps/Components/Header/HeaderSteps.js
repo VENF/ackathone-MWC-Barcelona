@@ -1,11 +1,11 @@
 import { ChevronLeft } from "react-feather";
 import { Header, CountSteps, Back, WrapperIcon } from "./style";
-export const HeaderSteps = ({ currentStep = "01" }) => {
+export const HeaderSteps = ({ currentStep = "01", back }) => {
   return (
     <Header>
-      <Back>
+      <Back onClick={back}>
         <WrapperIcon>
-          <ChevronLeft/>
+          <ChevronLeft />
         </WrapperIcon>
         <p>Volver</p>
       </Back>

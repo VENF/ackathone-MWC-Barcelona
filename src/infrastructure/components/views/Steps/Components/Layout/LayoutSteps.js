@@ -7,16 +7,13 @@ export const LayoutSteps = ({
   title,
   subtitle,
   showSubtitle = true,
+  back,
 }) => {
   return (
     <div>
-      <HeaderSteps currentStep={currentStep} />
+      <HeaderSteps back={back} currentStep={currentStep} />
       <Container>
-        <Info
-          title={title}
-          subtitle={subtitle}
-          showSubtitle={showSubtitle}
-        />
+        <Info title={title} subtitle={subtitle} showSubtitle={showSubtitle} />
         <Content>{children}</Content>
       </Container>
     </div>
