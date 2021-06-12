@@ -1,5 +1,5 @@
 import { Container, Content, Frame, Wrapper } from "./style";
-
+const h = 2;
 export const Layout = ({ children }) => {
   return (
     <Container>
