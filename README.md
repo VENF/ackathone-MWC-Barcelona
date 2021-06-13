@@ -1,25 +1,24 @@
 #Hackathone MWC Barcelona :smile:
 
 > **Victor Naranjo**.
-> Nombre del reto, demo del sitio en -> [MWCdemo](https://ejemplo.com/)...
+> Reto frontend Hackathone MWC Barcelona , demo del sitio en -> [MWCdemo](https://ejemplo.com/)...
 
 ### Descripción del Proyecto
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+Se pide la realización de una pasarela registro proporcionada por los organizadores del evento,
+Para dar el diseño como finalizado nos piden que complemetemos los siguientes objetivos
+
+##### Objetivos
+
+- **Task 1**: Puedo ver las páginas que se muestran en el diseño desde el PC
+- **Task 2**: Puedo ver las páginas que se muestran en el diseño desde el móvil
+- **Task 3**: Si se intenta pasar de página y el correo introducido no es un correo tiene que abrirse un dialog notificándolo
+- **Task 4**: Al acabar el formulario aparece un dialog informando que todo el proceso ha salido correctamente
 
 #### Tecnologias
 
 - Languages: `Javascript - (React)`
 - Framework: `Nextjs`
-- Testing: `Jest` and `React-Testing-Library`
-
-#### Llamadas a API's
-
-En este proyecto tome la decisión de crear un contenedor personalizado para Fetch en lugar de usar Fetch simple en cada llamada o obtar por alternativas como axios por la siguientes razones:
-
-- `Tamaño de paquete más pequeño`
-- `Manejo y corrección de errores simple`
-- `Definir un estandar de respuestas en todas las llamadas`
 
 #### Arquitectura del proyecto
 
@@ -28,8 +27,6 @@ Para este proyecto tome la decisión de implementar una arquitectura hexagonal c
 **Nota:** El estilo de arquitectura hexagonal no se ha tomado al pie de la letra y a sido adaptado a las necesidades del proyecto, asi como tambien se han omitido partes del modelo a fin de reducir el timpo de construccion del mismo
 
 ##### Estructura
-
-- **tests**: Directorio que contiene todos los test del proyecto
 
 - **pages:** Directorio creado por NextJS para gestionar las páginas de la aplicación
 
@@ -49,12 +46,8 @@ npm install # Instala todas las dependencias
 npm run dev # Ejecuta el proyecto en modo desarrollo
 ```
 
-##### Ejecutar pruebas
+### Diseño
 
-```sh
-npm run test # corre las pruebas
+Diseño base proporcionado por el equipo de Nuwe
 
-npm run test:watch  #corre las pruebas en modo observador
-
-npm run test:coverage # reporte de covertura
-```
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="700px" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeS3YIa01yjhCUw2DZ8sFHB%2FRegistration-Onboarding-Design-Community%3Fnode-id%3D1%253A649" allowfullscreen></iframe>
