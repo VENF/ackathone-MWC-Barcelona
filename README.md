@@ -1,7 +1,7 @@
 #Hackathone MWC Barcelona :smile:
 
 > **Victor Naranjo**.
-> Reto frontend Hackathone MWC Barcelona , demo del sitio en -> [MWCdemo](https://ejemplo.com/)...
+> Reto frontend Hackathone MWC Barcelona , demo del sitio en -> [MWCdemo](https://ackathone-mwc-barcelona.vercel.app/)...
 
 ### Descripción del Proyecto
 
@@ -45,9 +45,3 @@ npm install # Instala todas las dependencias
 
 npm run dev # Ejecuta el proyecto en modo desarrollo
 ```
-
-### Diseño
-
-Diseño base proporcionado por el equipo de Nuwe
-
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="700px" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeS3YIa01yjhCUw2DZ8sFHB%2FRegistration-Onboarding-Design-Community%3Fnode-id%3D1%253A649" allowfullscreen></iframe>
