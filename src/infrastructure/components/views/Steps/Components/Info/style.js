@@ -1,4 +1,4 @@
-import { theme } from "@infrastructure/components/theme"
+import { theme } from "@infrastructure/components/theme";
 import styled from "@emotion/styled";
 
 export const Title = styled.h3({
@@ -8,14 +8,16 @@ export const Title = styled.h3({
   },
 });
 
-export const SubTitle = styled.p({
+export const SubTitle = styled.p(({ showSubtitle }) => ({
   marginTop: "10px",
   color: theme.palette.secondaryText,
   "@media (max-width: 410px)": {
     fontSize: ".9rem",
   },
-});
-
+  "@media (max-width: 600px)": {
+    display: showSubtitle ? "none" : "block",
+  },
+}));
 
 export const Wrapper = styled.div({
   width: "500px",
@@ -26,4 +28,3 @@ export const Wrapper = styled.div({
     width: "100%",
   },
 });
-

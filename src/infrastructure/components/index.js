@@ -1,5 +1,5 @@
 export { Layout } from "./Layout";
-export { Input } from "./Inputs";
+export { Input, Select } from "./Inputs";
 export { Button } from "./Buttons";
 export { Card } from "./Cards";
 export { Modal } from "./Modal";

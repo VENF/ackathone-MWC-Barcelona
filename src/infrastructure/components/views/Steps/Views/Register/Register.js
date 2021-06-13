@@ -1,13 +1,14 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
+import { useState } from "react";
 import { UserService } from "@domain/services/user.service";
 import { handlerForms } from "@infrastructure/handlerForms";
-import { Input, Button, Alert } from "@infrastructure/components";
+import { Input, Button, Alert, Modal } from "@infrastructure/components";
 import { LayoutSteps } from "@infrastructure/components/views/Steps/Components";
-import { Globe } from "react-feather";
 import { Container, Form, SocialRegister, SocialButton, Error } from "./style";
 
 export const Register = () => {
+  const [showModal, setShowModal] = useState(false);
   const [alert, setAlert] = useState({
     show: false,
     msg: "",
@@ -17,11 +18,14 @@ export const Register = () => {
     handlerForms();
 
   const onSubmit = (data) => {
-    const { next, msg } = UserService.registerUser(data);
+    const { next, msg, email } = UserService.registerUser(data);
     if (next) {
       router.push("/register/complete");
     }
-    if (msg) {
+    if (!email) {
+      setShowModal(true);
+    }
+    if (msg && email === undefined) {
       setAlert({
         ...alert,
         show: true,
@@ -37,6 +41,7 @@ export const Register = () => {
       title="Registra tu cuenta individual"
       subtitle="Para poder revisar que se trata de una cuenta real, necesitamos la siguiente información"
       showSubtitle={true}
+      section="Personal Info."
     >
       {alert.show && <Alert msg={alert.msg} />}
       <Container>
@@ -51,7 +56,8 @@ export const Register = () => {
               <Input
                 type="text"
                 name="name"
-                label="Nombre completo*"
+                label="Nombre completo"
+                placeholder="Nombre completo"
                 height="50px"
                 fullSize={true}
                 {...rest}
@@ -59,17 +65,16 @@ export const Register = () => {
               />
             )}
           />
-          {errors?.email && <Error>{"El correo no puede estar vacio"}</Error>}
           <ControllerInput
             name="email"
             control={controlRef}
             defaultValue=""
-            rules={{ required: true }}
             render={({ field: { ref, ...rest }, fieldState }) => (
               <Input
-                type="email"
+                type="text"
                 name="email"
-                label="Correo electronico*"
+                label="Correo electronico"
+                placeholder="Correo electronico"
                 height="50px"
                 fullSize={true}
                 {...rest}
@@ -89,6 +94,7 @@ export const Register = () => {
               <Input
                 type="password"
                 name="password"
+                placeholder="Contraseña"
                 label="Contraseña"
                 height="50px"
                 fullSize={true}
@@ -111,11 +117,18 @@ export const Register = () => {
         <SocialRegister>
           <p>o</p>
           <SocialButton>
-            <Globe />
+            <Image src="/iconGoogle.svg" alt="google" width={20} height={20} />
             <p>Registrate con Google</p>
           </SocialButton>
         </SocialRegister>
       </Container>
+      <Modal onClose={() => setShowModal(false)} show={showModal}>
+        <h4>¡Ups, Algo a salido mal!</h4>
+        <p style={{ margin: "1rem 0rem" }}>
+          Parece que el correo introducido ya está en uso. Porfavor, revísalo y
+          vuelve a intentarlo de nuevo
+        </p>
+      </Modal>
     </LayoutSteps>
   );
 };

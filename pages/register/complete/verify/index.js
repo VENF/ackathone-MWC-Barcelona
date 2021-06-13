@@ -5,11 +5,11 @@ export default function VerifyPage() {
   return (
     <div>
       <Head>
-        <title>Unete a la comunidad</title>
+        <title>Verifica tu cuenta</title>
         <meta name="app" content="app" />
       </Head>
       <Layout>
-        <VerifyAccount/>
+        <VerifyAccount />
       </Layout>
     </div>
   );

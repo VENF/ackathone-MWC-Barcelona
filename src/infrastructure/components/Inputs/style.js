@@ -10,11 +10,12 @@ export const Field = styled.input({
   background: "#E7EBEE",
   padding: "0rem 1rem",
   color: "#2C3E50",
+  transition: "all ease .3s",
   "&::placeholder": {
-    color: theme.palette.secondaryText
+    color: theme.palette.secondaryText,
   },
   "&:focus": {
-    border: `1px solid ${theme.palette.primary}`
+    border: `1px solid ${theme.palette.primary}`,
   },
 });
 
@@ -24,7 +25,7 @@ export const Label = styled.label((props) => ({
   transition: "all ease .3s",
   position: "relative",
   top: "-7px",
-  textTransform: "capitalize"
+  textTransform: "capitalize",
 }));
 
 export const Wrapper = styled.div(
@@ -43,3 +44,21 @@ export const Wrapper = styled.div(
     },
   })
 );
+
+export const SelectInput = styled.select({
+  height: "100%",
+  width: "100%",
+  outline: "none",
+  borderRadius: "5px",
+  border: "none",
+  background: "#E7EBEE",
+  padding: "0rem 1rem",
+  color: "#2C3E50",
+  transition: "all ease .3s",
+  "&:focus": {
+    border: `1px solid ${theme.palette.primary}`,
+  },
+  "& option": {
+    border: "1px solid red",
+  },
+});

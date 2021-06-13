@@ -5,7 +5,7 @@ export default function CompletePage() {
   return (
     <div>
       <Head>
-        <title>Unete a la comunidad</title>
+        <title>Completa tu perfil</title>
         <meta name="app" content="app" />
       </Head>
       <Layout>

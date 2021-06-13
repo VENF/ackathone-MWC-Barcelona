@@ -7,7 +7,7 @@ export const Layout = ({ children }) => {
           <div>
             <p>
               Nuwe es la plataforma que convierte el desarrollo profesional, la
-              búsqueda de trabajo y las conecxionesde personas y empresas en
+              búsqueda de trabajo y las conexiones de personas y empresas en
               juego. Haciendo que puedas centrarte en lo que te gusta,
               programar,diseñar,crear,planear...
             </p>

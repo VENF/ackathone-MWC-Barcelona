@@ -5,26 +5,22 @@ export const Body = styled.div({
   paddingTop: "10px",
 });
 
-export const Header = styled.div({
-  display: "flex",
-  justifyContent: "flex-end",
-  fontSize: "25px",
-});
-
 export const Clouse = styled.button({
-  width: "40px",
-  height: "30px",
-  position: "relative",
-  top: "-20px",
-  right: "-20px",
-  borderRadius: "20px",
-  fontSize: "1.5rem",
+  width: "100px",
+  height: "40px",
+  border: `1px solid ${theme.palette.primary}`,
+  borderRadius: "5px",
+  fontSize: "1rem",
   fontWeight: 500,
   background: "#FFF",
   color: theme.palette.secondaryText,
-  border: "none",
   cursor: "pointer",
   outline: "none",
+  transition: "all ease .3s",
+  "&:hover": {
+    backgroundColor: theme.palette.primary,
+    color: "#FFF",
+  },
 });
 
 export const Content = styled.div({
@@ -60,6 +56,15 @@ export const Filter = styled.div({
   zIndex: 1,
 });
 
-export const ModalWrapper = styled.div({ 
-  width: "500px", height: "400px"
+export const ModalWrapper = styled.div({
+  width: "400px",
+  height: "200px",
+});
+
+export const Flow = styled.div({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  marginTop: "1rem",
+  padding: "0rem 1rem",
 });

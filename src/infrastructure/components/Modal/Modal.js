@@ -1,24 +1,28 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
+import { Button } from "../Buttons";
 import {
   Content,
   Overlay,
-  Header,
   Body,
   Filter,
   Clouse,
   ModalWrapper,
+  Flow,
 } from "./style";
 
-export const Modal = ({ show, onClose, children }) => {
-  const contentRef = useRef(null);
+export const Modal = ({
+  show,
+  onClose,
+  children,
+  actions = false,
+  action,
+  actionText,
+}) => {
   const [isBrowser, setIsBrowser] = useState(false);
 
   useEffect(() => {
     setIsBrowser(true);
-
-    window.addEventListener("click", backDropHandler);
-    return () => window.removeEventListener("click", backDropHandler);
   }, []);
 
   const handleCloseClick = (e) => {
@@ -26,18 +30,19 @@ export const Modal = ({ show, onClose, children }) => {
     onClose();
   };
 
-  const backDropHandler = (e) => {
-      console.log(contentRef.current?.contains(e.target))
-  };
-
   const modalContent = show ? (
     <Overlay>
-      <ModalWrapper ref={contentRef}>
+      <ModalWrapper>
         <Content>
-          <Header>
-            <Clouse onClick={handleCloseClick}>x</Clouse>
-          </Header>
           <Body>{children}</Body>
+          {!actions ? (
+            <Clouse onClick={handleCloseClick}>Cerrar</Clouse>
+          ) : (
+            <Flow>
+              <Clouse onClick={handleCloseClick}>Cerrar</Clouse>
+              <Button action={action}>{actionText}</Button>
+            </Flow>
+          )}
         </Content>
       </ModalWrapper>
       <Filter></Filter>

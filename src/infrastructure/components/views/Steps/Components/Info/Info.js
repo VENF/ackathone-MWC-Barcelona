@@ -3,7 +3,7 @@ export const Info = ({ title, subtitle, showSubtitle = true }) => {
   return (
     <Wrapper>
       <Title>{title}</Title>
-      {showSubtitle && <SubTitle>{subtitle}</SubTitle>}
+      <SubTitle showSubtitle={showSubtitle}>{subtitle}</SubTitle>
     </Wrapper>
   );
 };

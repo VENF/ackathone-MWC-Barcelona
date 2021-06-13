@@ -8,10 +8,11 @@ export const LayoutSteps = ({
   subtitle,
   showSubtitle = true,
   back,
+  section = "",
 }) => {
   return (
     <div>
-      <HeaderSteps back={back} currentStep={currentStep} />
+      <HeaderSteps section={section} back={back} currentStep={currentStep} />
       <Container>
         <Info title={title} subtitle={subtitle} showSubtitle={showSubtitle} />
         <Content>{children}</Content>
